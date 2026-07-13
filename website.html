@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+<head><title>Practise</title>
+<style>
+body{
+  margin: 0;
+
+}
+.logo{
+  max-width: 100%;
+  height: auto;
+}
+.left-side{
+  width: 8rem;
+}
+.header{
+  position: static;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10rem;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 2rem;
+  align-items: center;
+  flex:1;
+}
+.home,.packages,.training{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.9rem;
+  font-weight: bold;
+
+}
+.right-side{
+  display: flex;
+  flex-direction: row;
+  gap: 2.8rem;
+  flex-shrink: 0;
+}
+.roam{
+  max-width: 100%;
+  height: auto;
+}
+.image-1{
+ width: 60rem;
+ margin: 0 auto;
+ 
+
+
+}       
+.desc{
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0;
+ background-image: url("opaqu.jpg");
+ margin-bottom: 1rem;
+}       
+.content-1{
+
+ padding-bottom: 2rem;
+
+}
+.headline{
+ color: rgb(57, 29, 215);
+ font-size: 2.8rem;
+ font-weight: bolder;
+ width: 59.9rem;
+
+  
+}     
+.text{
+  display: flex;
+  justify-content: center;
+
+}    
+.dumbell-man{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+
+
+}    
+.grid{
+  width: 50rem;
+}     
+.para-1{
+  font-weight: bolder;
+  font-size: 2.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  width: 56rem;
+  color: white;
+  
+}     
+.para-2{
+  margin-top: 0;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: white;
+}      
+.para-3{
+  font-size: 2.4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: white;
+}    
+.para-4{
+  font-size: 2.4rem;
+  margin-top: 0;
+ margin-bottom: 1rem;
+color: white;
+}
+.para-5{
+  font-size: 2.4rem;
+  margin-top: 0;
+ color: white
+}
+.the-card{
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+}
+.the-card-2{
+    display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+}
+.the-card-3{
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+}
+.the-card-4{
+    display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+}
+.the-card, .the-card-2, .the-card-3, .the-card-4 {
+  background-color: #1E2321; /* Background uniform card color */
+  border: 1px solid #2E3633;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem; /* Sectors ke beech me spacing */
+  display: flex;
+  
+}
+.price{
+  font-size: 3.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bolder;
+}
+.personal{
+  font-size: 4.4rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+color: white;
+}
+.cash{
+  font-size: 3.2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+.what-in{
+  font-size: 3.2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+.user{
+  font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+.access{
+  font-size: 3.2rem;
+  margin-top: 0;
+  color: white;
+  margin-bottom: 0;
+  
+}
+.salary-1{
+  background-color: #2B0E16;
+  display: inline-block;
+padding-left: 2rem;
+padding-top: 3rem;
+padding-bottom: 3rem;
+border-radius: 10px;
+padding-right: 1rem;
+
+}
+.DAD{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: antiquewhite;
+  justify-content: center;
+  padding-top: 4%;
+  padding-bottom: 2rem;
+}
+.salary-2{
+  background-color: #2B0E16;
+  display: inline-block;
+padding-left: 2rem;
+padding-top: 3rem;
+padding-bottom: 3rem;
+border-radius: 10px;
+padding-right: 1rem;
+
+}
+
+.map-section {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+.map-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 5REM;
+  margin-bottom: 4rem;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* मैप को रिस्पॉन्सिव और सुंदर बॉर्डर देने के लिए */
+.map-container iframe {
+  width: 100%;
+  max-width: 1000px; /* मैप की ज्यादा से ज्यादा चौड़ाई */
+  height: 450px;      /* मैप की लम्बाई */
+  border-radius: 8px; /* किनारों को गोल करने के लिए */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* हल्का सा शैडो */
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+}
+.content-last{
+  display: FLEX;
+  height: 25rem;
+  background-color: #0D0D11;
+  GAP: 8REM;
+  justify-content: CENTER;
+  align-items: center;
+}
+.instagram,.facebook,.twitter{
+ width: 100%;
+ height: auto;
+
+}
+.instagram-folder,.facebook-folder,.twitter-folder{
+  width: 5rem;
+
+
+
+
+}
+.INSTA-SLOGAN,.FACEBOOK-SLOGAN,.TWITTER-SLOGAN{
+  COLOR: WHITE;
+  font-size: 2REM;
+  WORD-SPACING: 3REM;
+  
+  }
+.the-responsive{
+  display: none;
+}
+.home, .training, .packages {
+  color: black;
+  margin: 0px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none; /* Underline hatane ke liye */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px; /* 👈 Yeh sabse zaroori hai! Yeh browser ko batayega ki tumhara header 100px fixed hai, toh content header ke peeche nahi chhupega. */
+}
+
+@media (min-width: 1024px) {
+
+ .header{
+  height: 7rem;
+  padding: 0 3.9rem;
+ }
+ .left-side{
+  width: 4.8rem;
+ }
+.home,.training,.packages{
+  font-size: 2.5rem;
+}
+.image-1{
+   margin: 0 auto;
+   width: 49.9rem;
+}
+.grid{
+  width: 28.9rem;
+}
+.para-1{
+ font-size: 28px;
+ width: 450px;
+ margin-top: 0;
+ line-height: 29px;
+ margin-bottom: 3px;
+
+}
+.dumbell-man{
+  margin-bottom: 2px;
+}
+.para-2{
+  display: none;
+}
+.para-3{
+  font-size: 29px;
+}
+.para-4{
+  font-size: 29px;
+}
+.para-5{
+  font-size: 29px;  
+}
+.the-card{
+ display: block;
+}
+
+.the-card,.the-card-2,.the-card-3,.the-card-4{
+  display: inline-block;
+  width: 450px;
+}
+.for-responsive{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.price{
+  font-size: 50px;
+}
+.salary-1,.salary-2{
+  width: 320px;
+}
+.map-title{
+  margin-top: 0px;
+  margin-bottom: 3rem;
+  background-image: url("colorful\ blur.jpg");
+}
+.map-section{
+  margin-top: 2rem;
+}
+.content-last{
+ height: 25rem;
+
+}
+.instagram-folder,.facebook-folder,.twitter-folder{
+  width: 3rem;
+}
+.INSTA-SLOGAN,.FACEBOOK-SLOGAN,.TWITTER-SLOGAN{
+  COLOR: WHITE;
+  font-size: 1.8REM;
+  WORD-SPACING: 3REM;
+  margin-top: 0.8rem;
+  
+  }
+}
+
+@media (min-width: 1920px) {
+
+ .header{
+  height: 9rem;
+  padding: 0 13rem;
+ }
+ .left-side{
+  width: 8rem;
+ }
+ .right-side{
+  gap: 8rem;
+ }
+.home,.training,.packages{
+  font-size: 3.1rem;
+}
+.desc{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 4rem;
+}
+.image-1{
+   margin: 0 auto;
+   width: 80rem;
+   margin-bottom: 0;
+}
+.headline{
+  margin-top: 3rem;
+font-size: 4rem;
+width: 80rem;
+
+
+}
+.grid{
+  width: 100%;
+  MAX-WIDTH: 100%;
+}
+.para-1{
+ font-size: 28px;
+ width: 100%;
+ margin-top: 0;
+ line-height: 29px;
+ margin-bottom: 3px;
+
+}
+.dumbell-man{
+  margin-bottom: 2px;
+}
+.para-2{
+  display: none;
+}
+.para-3{
+  font-size: 29px;
+}
+.para-4{
+  font-size: 29px;
+}
+.para-5{
+  font-size: 29px;  
+}
+.the-card,.the-card-2,.the-card-3,.the-card-4{
+  display: block;
+  width: 100%;
+  MARGIN: 0;
+  display: block;
+  width: auto;
+}
+.for-responsive{
+  display: grid;
+grid-template-columns: repeat(2, 600px);
+justify-content: center;
+gap: 5rem 4rem;
+}
+.price{
+  font-size: 50px;
+}
+.salary-1,.salary-2{
+  width: 320px;
+}
+.map-title{
+  margin-top: 0px;
+  margin-bottom: 3rem;
+  background-image: url("colorful\ blur.jpg");
+}
+.map-section{
+  margin-top: 2rem;
+}
+.content-last{
+ height: 30rem;
+ gap: 15rem;
+
+}
+.instagram-folder,.facebook-folder,.twitter-folder{
+  width: 3rem;
+}
+.INSTA-SLOGAN,.FACEBOOK-SLOGAN,.TWITTER-SLOGAN{
+  COLOR: WHITE;
+  font-size: 1.8REM;
+  WORD-SPACING: 3REM;
+  margin-top: 0.8rem;
+  
+  }
+}
+
+@media (min-width: 1440px) {
+
+ .header{
+  height: 7rem;
+  padding: 0 13rem;
+ }
+ .left-side{
+  width: 6rem;
+ }
+ .right-side{
+  gap: 6rem;
+ }
+.home,.training,.packages{
+  font-size: 2rem;
+}
+.image-1{
+   margin: 0 auto;
+   width: 60rem;
+   margin-bottom: 0;
+}
+.headline{
+  margin-top: 3rem;
+
+}
+.grid{
+  width: 100%;
+  MAX-WIDTH: 100%;
+}
+.para-1{
+ font-size: 28px;
+ width: 100%;
+ margin-top: 0;
+ line-height: 29px;
+ margin-bottom: 3px;
+
+}
+.dumbell-man{
+  margin-bottom: 2px;
+}
+.para-2{
+  display: none;
+}
+.para-3{
+  font-size: 29px;
+}
+.para-4{
+  font-size: 29px;
+}
+.para-5{
+  font-size: 29px;  
+}
+.the-card,.the-card-2,.the-card-3,.the-card-4{
+  display: block;
+  width: 100%;
+  MARGIN: 0;
+  display: block;
+  width: auto;
+}
+.for-responsive{
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+justify-content: center;
+gap: 5rem 4rem;
+}
+.price{
+  font-size: 50px;
+}
+.salary-1,.salary-2{
+  width: 320px;
+}
+.map-title{
+  margin-top: 0px;
+  margin-bottom: 3rem;
+  background-image: url("colorful\ blur.jpg");
+}
+.map-section{
+  margin-top: 2rem;
+}
+.content-last{
+ height: 25rem;
+
+}
+.instagram-folder,.facebook-folder,.twitter-folder{
+  width: 3rem;
+}
+.INSTA-SLOGAN,.FACEBOOK-SLOGAN,.TWITTER-SLOGAN{
+  COLOR: WHITE;
+  font-size: 1.8REM;
+  WORD-SPACING: 3REM;
+  margin-top: 0.8rem;
+  
+  }
+}
+
+@media (min-width: 2560px) {
+
+ .header{
+  height: 10rem;
+  padding: 0 13rem;
+ }
+ .left-side{
+  width: 9rem;
+ }
+ .right-side{
+  gap: 9rem;
+ }
+ .desc{
+  font-size: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+ }
+.home,.training,.packages{
+  font-size: 4rem;
+  font-weight: 200;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.image-1{
+   margin: 0 auto;
+   width: 100rem;
+   margin-bottom: 0;
+}
+.headline{
+  margin-top: 3rem;
+  font-size: 4rem;
+  width: 600rem;
+  text-align: center;
+
+}
+.grid{
+  width: 100%;
+  MAX-WIDTH: 100%;
+}
+.para-1{
+ font-size: 28px;
+ width: 100%;
+ margin-top: 0;
+ line-height: 29px;
+ margin-bottom: 3px;
+
+}
+.dumbell-man{
+  margin-bottom: 2px;
+}
+.para-2{
+  display: none;
+}
+.para-3{
+  font-size: 29px;
+}
+.para-4{
+  font-size: 29px;
+}
+.para-5{
+  font-size: 29px;  
+}
+.the-card,.the-card-2,.the-card-3,.the-card-4{
+  display: block;
+  width: 100%;
+  MARGIN: 0;
+  display: block;
+  width: auto;
+}
+.for-responsive{
+  display: grid;
+grid-template-columns: repeat(2, 900px);
+justify-content: center;
+gap: 5rem 4rem;
+}
+.price{
+  font-size: 50px;
+}
+.salary-1,.salary-2{
+ padding-right: 5rem;
+ padding-left: 5rem;
+
+}
+.map-title{
+  margin-top: 0px;
+  margin-bottom: 3rem;
+  background-image: url("colorful\ blur.jpg");
+  font-size: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.map-section{
+  margin-top: 2rem;
+}
+.content-last{
+ height: 35rem;
+ gap: 20rem;
+
+}
+.instagram-folder,.facebook-folder,.twitter-folder{
+  width: 3rem;
+}
+.INSTA-SLOGAN,.FACEBOOK-SLOGAN,.TWITTER-SLOGAN{
+  COLOR: WHITE;
+  font-size: 1.8REM;
+  WORD-SPACING: 3REM;
+  margin-top: 0.8rem;
+  
+  }
+.map-container{
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+ width: 100%;
+}
+.map-details{
+width: 100%;
+    max-width: 2000px; /* चौड़ाई बढ़ाकर 2000px की */
+    height: 500px;}
+.DAD{
+  gap: 10rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+
+
+
+
+
+
+ <body>
+
+<div class="header">
+
+<div class="left-side" >
+  <img class="logo" src="logo.jpg">
+</div>
+<div class="right-side">
+  <a href="#home" class="home" >Home</a>
+  <a href="#trainer" class="training" >Training</a>
+  <a href="#packages" class="packages" >Packages</a>
+</div>
+</div>
+<!--header done-->
+<div class="content-1" >
+
+<div id="home" class="slogan" >
+  <p class="desc" >Connect to your inner strength</p>
+</div>
+
+
+  <div class="image-1" >
+  <img  class="roam" src="ROAM.jpg">
+</div>
+</div>
+<!--main content-1 over-->
+<div class="content-2" >
+<div id="trainer" class="text" >
+  <p class="headline" >SCIENCE-BASED FITNESS TRAINING BUILT ON 4 key PILLARS </p>
+</div>
+<div class="for-responsive" >
+<div class="the-card">
+<div class="grid" >
+  <img class="dumbell-man" src="dumbell man.webp">
+<div>
+  <p CLASS="para-1" >STRENGTH + CARDIOVASCULAR TRAINING OPTIMIZES PERFORMANCE</p>
+</div>
+<DIV>
+  <P class="para-2" >By combining resistance training with cardio, AF Training improves your strength, performance, and energy levels.</P>
+</DIV>
+<DIV>
+  <P class="para-3" ><span style="color: yellow;">&#10003;</span>
+ Builds and maintains muscle strength and endurance</P>
+</DIV>
+<DIV>
+  <P class="para-4"><span style="color: yellow;">&#10003;</span> Boosts metabolism and manages weight</P>
+</DIV>
+<DIV>
+  <P class="para-5"><span style="color: yellow;">&#10003;</span>Promotes heart health and reduces stress</P>
+</DIV>
+</div>
+</div>
+
+<div class="the-card-2">
+<div class="grid" >
+  <img class="dumbell-man" src="lady dumbell.webp">
+<div>
+  <p CLASS="para-1" >Functional Fitness Enhances Mobility & Balance</p>
+</div>
+<DIV>
+  <P class="para-2" >Functional training is designed to improve the quality of real-life activities by improving your ability to squat, lunge, push, and pull.</P>
+</DIV>
+<DIV>
+  <P class="para-3" ><span style="color: yellow;">&#10003;</span>
+ Promotes a more active and enjoyable lifestyle</P>
+</DIV>
+<DIV>
+  <P class="para-4"><span style="color: yellow;">&#10003;</span> Reduces pain and discomfort during everyday activities</P>
+</DIV>
+<DIV>
+  <P class="para-5"><span style="color: yellow;">&#10003;</span>Decreased risk of injury</P>
+</DIV>
+</div>
+</div>
+
+<div class="the-card-3">
+<div class="grid" >
+  <img class="dumbell-man" src="fat lady dumbell.webp">
+<div>
+  <p CLASS="para-1" >Workout Variety Boosts Confidence & Outcomes</p>
+</div>
+<DIV>
+  <P class="para-2" >Each training session is unique and designed to keep you motivated and challenged on your path to achieve lasting results.</P>
+</DIV>
+<DIV>
+  <P class="para-3" ><span style="color: yellow;">&#10003;</span>
+Enhanced self-esteem and body confidence</P>
+</DIV>
+<DIV>
+  <P class="para-4"><span style="color: yellow;">&#10003;</span> Increased mental resilience and stamina</P>
+</DIV>
+<DIV>
+  <P class="para-5"><span style="color: yellow;">&#10003;</span>Workout variety helps builds physical abilities</P>
+</DIV>
+</div>
+</div>
+
+<div class="the-card-4">
+<div class="grid" >
+  <img class="dumbell-man" src="trademill.webp">
+<div>
+  <p CLASS="para-1" >Interconnected Technology Assess & Track Progress</p>
+</div>
+<DIV>
+  <P class="para-2" >By harnessing a range of fitness technologies, such as the Evolt 360 body composition scanner, the Anytime Fitness App, and Apple Health/Google Health Connect, we use data to gauge progress beyond the scale, personalize your plan, and celebrate your success</P>
+</DIV>
+<DIV>
+  <P class="para-3" ><span style="color: yellow;">&#10003;</span>
+ Tracking provides measurable proof of progress</P>
+</DIV>
+<DIV>
+  <P class="para-4"><span style="color: yellow;">&#10003;</span> Monitoring can increase accountability</P>
+</DIV>
+<DIV>
+  <P class="para-5"><span style="color: yellow;">&#10003;</span>Provides a sense of accomplishment</P>
+</DIV>
+</div>
+</div>
+</div>
+</div>
+<!--MAIN CONTENT-1 OVER-->
+<DIV class="main-content-2">
+<div>
+  <P CLASS="price" >Reiterate your value proposition</P>
+</div>
+<DIV CLASS="DAD">
+<div id="packages" class="salary-1" >
+<div>
+  <p class="personal" >Personal&plus;</p>
+</div>
+<div>
+  <p class="cash" >$16</p>
+</div>
+<div class="item" >
+<p class="what-in" >What's Included :</p>
+<p class="user" >&bull;1+ Users</p>
+<p class="access" >&bull;Full Access</p>
+</div>
+</div>
+<div class="salary-2" >
+<div>
+  <p class="personal" >Advanced&plus;</p>
+</div>
+<div>
+  <p class="cash" >$24</p>
+</div>
+<div class="item" >
+<p class="what-in" >What's Included :</p>
+<p class="user" >&bull;2+ Users</p>
+<p class="access" >&bull;Full Access</p>
+</div>
+</div>
+
+
+</DIV>
+</DIV>
+
+<!--MAIN CONTENT 2 OVER-->
+<!--MAP FOR WEBSITE-->
+<div class="map-section">
+  <h2 class="map-title">Our Location</h2>
+  <div class="map-container">
+    <iframe class="map-details" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55834.270150518896!2d77.63416562497072!3d28.997981166798475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c65cd9e709405%3A0xce2981d15c24a188!2sFlex%20gym!5e0!3m2!1sen!2sin!4v1783789642655!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+</div>   
+
+<!--whatsapp button-->
+<a href="https://wa.me/919259225424" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="130" height="130">
+</a>
+<!--last div-->
+<div class="content-last">
+<div class="instagram-folder" >
+<img class="instagram" src="instagram.png">
+<P class="INSTA-SLOGAN" >GYM</P>
+</div>
+<div class="facebook-folder" >
+  <img  class="facebook" src="facebook.png">
+  <P CLASS="FACEBOOK-SLOGAN" >GYM</P>
+</div>
+<div class="twitter-folder" >
+  <img  class="twitter" src="twitter.png">
+  <P CLASS="TWITTER-SLOGAN" >GYM</P>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  </div >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
